@@ -10,7 +10,6 @@
     "animation",
     "card",
     "flip",
-    "mantine",
     "react",
     "react-component",
     "typescript",
@@ -35,8 +34,6 @@
   },
   "repository": "https://github.com/gfazioli/react-flip.git",
   "peerDependencies": {
-    "@mantine/core": ">=7.0.0",
-    "@mantine/hooks": ">=7.0.0",
     "react": "^18.x || ^19.x",
     "react-dom": "^18.x || ^19.x"
   },
