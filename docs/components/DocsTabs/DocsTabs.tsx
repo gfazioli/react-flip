@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { IconAdjustments, IconCode, IconFileText } from '@tabler/icons-react';
+import { IconCode, IconFileText } from '@tabler/icons-react';
 import { Container, Tabs } from '@mantine/core';
 import { PropsTablesList } from '../PropsTable';
-import { StylesApiTablesList } from '../StylesApiTable';
 import { TableOfContents } from '../TableOfContents';
 import classes from './DocsTabs.module.css';
 
@@ -66,14 +65,6 @@ export function DocsTabs({
                 </div>
               </Tabs.Tab>
             )}
-            {hasStyles && (
-              <Tabs.Tab value="styles-api">
-                <div className={classes.tabInner}>
-                  <IconAdjustments size={20} stroke={1.5} className={classes.tabIcon} />
-                  Styles API
-                </div>
-              </Tabs.Tab>
-            )}
           </Tabs.List>
         </Container>
       </div>
@@ -98,18 +89,6 @@ export function DocsTabs({
               componentPrefix={componentPrefix}
               data={docgen}
             />
-          </div>
-        </Tabs.Panel>
-
-        <Tabs.Panel value="styles-api">
-          <div className={classes.tabContent} data-secondary>
-            {stylesApiData && (
-              <StylesApiTablesList
-                data={stylesApiData}
-                components={componentsStyles!}
-                componentPrefix={componentPrefix}
-              />
-            )}
           </div>
         </Tabs.Panel>
       </Container>
