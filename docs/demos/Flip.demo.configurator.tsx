@@ -1,4 +1,4 @@
-import { Flip } from '@gfazioli/mantine-flip';
+import { Flip } from '@gfazioli/react-flip';
 import { MantineDemo } from '@mantinex/demo';
 
 function Wrapper(props: any) {
@@ -115,7 +115,7 @@ function Wrapper(props: any) {
 }
 
 const code = `
-import { Flip } from '@gfazioli/mantine-flip'';
+import { Flip } from '@gfazioli/react-flip'';
 
 function Demo() {
   return (
