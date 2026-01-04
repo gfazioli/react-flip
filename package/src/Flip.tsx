@@ -1,27 +1,8 @@
-import React, { useMemo, useRef, useState } from 'react';
-import {
-  Box,
-  BoxProps,
-  createVarsResolver,
-  PolymorphicFactory,
-  polymorphicFactory,
-  StylesApiProps,
-  useProps,
-  useStyles,
-} from '@mantine/core';
+import React, { forwardRef, useMemo, useRef, useState } from 'react';
 import { useDidUpdate, useUncontrolled } from '@mantine/hooks';
 import { FlipContextProvider } from './Flip.context';
 import { FlipTarget } from './FlipTarget/FlipTarget';
 import classes from './Flip.module.css';
-
-export type FlipStylesNames = 'root' | 'flip-container' | 'flip-front-face' | 'flip-back-face';
-
-export type FlipCssVariables = {
-  root: '--flip-perspective' | '--flip-transition-duration' | '--flip-transition-timing-function';
-  'flip-container': never;
-  'flip-front-face': never;
-  'flip-back-face': never;
-};
 
 export type FlipDirection = 'horizontal' | 'vertical';
 
@@ -63,60 +44,28 @@ export interface FlipBaseProps {
   /** Called when Flip is shown front side */
   onFront?: () => void;
 
+  style?: React.CSSProperties;
+
   children?: React.ReactNode;
 }
 
-export interface FlipProps extends BoxProps, FlipBaseProps, StylesApiProps<FlipFactory> {}
+export interface FlipProps extends FlipBaseProps {}
 
-export type FlipFactory = PolymorphicFactory<{
-  props: FlipProps;
-  defaultComponent: 'div';
-  defaultRef: HTMLDivElement;
-  stylesNames: FlipStylesNames;
-  vars: FlipCssVariables;
-  staticComponents: {
-    Target: typeof FlipTarget;
-  };
-}>;
-
-const defaultProps: Partial<FlipProps> = {
-  direction: 'horizontal',
-  directionFlipIn: 'negative',
-  directionFlipOut: 'positive',
-};
-
-const varsResolver = createVarsResolver<FlipFactory>((_, { perspective, easing, duration }) => ({
-  root: {
-    '--flip-perspective': perspective === undefined ? '1000px' : perspective,
-    '--flip-transition-duration': duration === undefined ? '.8s' : `${duration}s`,
-    '--flip-transition-timing-function': easing === undefined ? 'ease-in-out' : easing,
-  },
-  'flip-container': {},
-  'flip-front-face': {},
-  'flip-back-face': {},
-}));
-
-export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
-  const props = useProps('Flip', defaultProps, _props);
+const FlipComponent = forwardRef<HTMLDivElement, FlipProps>((props, ref) => {
   const {
-    perspective,
-    duration,
-    easing,
-    classNames,
-    style,
-    styles,
-    unstyled,
-    vars,
-    children,
-    className,
+    perspective = '1000px',
+    duration = 0.8,
+    easing = 'ease-in-out',
     flipped,
     defaultFlipped,
-    direction,
-    directionFlipIn,
-    directionFlipOut,
+    direction = 'horizontal',
+    directionFlipIn = 'negative',
+    directionFlipOut = 'positive',
+    children,
     onChange,
     onBack,
     onFront,
+    style,
     ...others
   } = props;
 
@@ -129,19 +78,6 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
     defaultValue: defaultFlipped,
     finalValue: false,
     onChange,
-  });
-
-  const getStyles = useStyles<FlipFactory>({
-    name: 'Flip',
-    props,
-    classes,
-    className,
-    style,
-    classNames,
-    styles,
-    unstyled,
-    vars,
-    varsResolver,
   });
 
   useDidUpdate(() => {
@@ -209,16 +145,34 @@ export const Flip = polymorphicFactory<FlipFactory>((_props, ref) => {
         flipped: _flipped,
       }}
     >
-      <Box ref={ref} {...getStyles('root')} {...others}>
-        <div ref={containerRef} {...getStyles('flip-container', { style: getDirectionIn })}>
-          <div {...getStyles('flip-front-face', { style: { zIndex: 0 } })}>{frontChild}</div>
-          <div {...getStyles('flip-back-face', { style: getBackRotation })}>{backChild}</div>
+      <div
+        ref={ref}
+        className={classes.root}
+        {...others}
+        style={
+          {
+            ...style,
+            '--flip-perspective': perspective,
+            '--flip-transition-duration': `${duration}s`,
+            '--flip-transition-timing-function': easing,
+          } as React.CSSProperties
+        }
+      >
+        <div ref={containerRef} className={classes.flipContainer} style={getDirectionIn}>
+          <div className={classes.flipFrontFace} style={{ zIndex: 0 }}>
+            {frontChild}
+          </div>
+          <div className={classes.flipBackFace} style={getBackRotation}>
+            {backChild}
+          </div>
         </div>
-      </Box>
+      </div>
     </FlipContextProvider>
   );
 });
 
-Flip.classes = classes;
-Flip.displayName = 'Flip';
-Flip.Target = FlipTarget;
+FlipComponent.displayName = 'Flip';
+
+export const Flip = Object.assign(FlipComponent, {
+  Target: FlipTarget,
+});
