@@ -53,6 +53,7 @@ function Wrapper(props: any) {
           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
             <Flip.Target>
               <button
+                type="button"
                 style={{
                   backgroundColor: '#228be6',
                   color: 'white',
@@ -93,6 +94,7 @@ function Wrapper(props: any) {
             <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
               <Flip.Target>
                 <button
+                  type="button"
                   style={{
                     backgroundColor: '#fa5252',
                     color: 'white',

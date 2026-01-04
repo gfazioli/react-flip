@@ -20,7 +20,6 @@ export function DocsTabs({
   docgen,
   componentsProps,
   componentsStyles,
-  stylesApiData,
   componentPrefix,
 }: DocsTabsProps) {
   const router = useRouter();

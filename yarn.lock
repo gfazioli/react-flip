@@ -1565,8 +1565,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@gfazioli/react-flip@workspace:package"
   peerDependencies:
-    "@mantine/core": ">=7.0.0"
-    "@mantine/hooks": ">=7.0.0"
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
   languageName: unknown

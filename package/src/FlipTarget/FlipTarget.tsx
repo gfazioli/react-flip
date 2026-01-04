@@ -11,10 +11,6 @@ export interface FlipTargetProps {
   refProp?: string;
 }
 
-const defaultProps: Partial<FlipTargetProps> = {
-  refProp: 'ref',
-};
-
 export const FlipTarget = forwardRef<HTMLDivElement, FlipTargetProps>((props, ref) => {
   const { children, refProp, ...others } = props;
 

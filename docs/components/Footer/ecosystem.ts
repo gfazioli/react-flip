@@ -18,9 +18,9 @@ export const ecosystem = [
     newWindow: true,
   },
   {
-    key: 'mantine-flip',
+    key: 'react-flip',
     title: 'Mantine Flip',
-    href: 'https://gfazioli.github.io/mantine-flip',
+    href: 'https://gfazioli.github.io/react-flip',
     newWindow: true,
   },
   {
