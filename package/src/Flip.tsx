@@ -1,7 +1,8 @@
 import React, { forwardRef, useMemo, useRef, useState } from 'react';
-import { useDidUpdate, useUncontrolled } from '@mantine/hooks';
 import { FlipContextProvider } from './Flip.context';
 import { FlipTarget } from './FlipTarget/FlipTarget';
+import { useDidUpdate } from './utils/use-did-update';
+import { useUncontrolled } from './utils/use-uncontrolled';
 import classes from './Flip.module.css';
 
 export type FlipDirection = 'horizontal' | 'vertical';

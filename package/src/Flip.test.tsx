@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from '@mantine/core';
-import { render } from '@mantine-tests/core';
+import { render } from '@testing-library/react';
 import { Flip } from './Flip';
 
 describe('Flip', () => {
@@ -10,7 +9,7 @@ describe('Flip', () => {
         <div>
           Pane 1
           <Flip.Target>
-            <Button>Flip Back</Button>
+            <button>Flip Back</button>
           </Flip.Target>
         </div>
         <div>Pane 2</div>
