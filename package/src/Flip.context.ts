@@ -1,5 +1,5 @@
-import { createSafeContext } from '@mantine/core';
 import { FLIP_ERRORS } from './Flip.errors';
+import { createSafeContext } from './utils/create-safe-context';
 
 interface FlipContext {
   toggleFlip: () => void;

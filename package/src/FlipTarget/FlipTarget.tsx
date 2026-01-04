@@ -1,6 +1,7 @@
 import React, { cloneElement, forwardRef } from 'react';
-import { createEventHandler, isElement, useProps } from '@mantine/core';
 import { useFlipContext } from '../Flip.context';
+import { createEventHandler } from '../utils/create-event-handler';
+import { isElement } from '../utils/is-element';
 
 export interface FlipTargetProps {
   /** Target element */
@@ -15,7 +16,7 @@ const defaultProps: Partial<FlipTargetProps> = {
 };
 
 export const FlipTarget = forwardRef<HTMLDivElement, FlipTargetProps>((props, ref) => {
-  const { children, refProp, ...others } = useProps('FlipTarget', defaultProps, props);
+  const { children, refProp, ...others } = props;
 
   if (!isElement(children)) {
     throw new Error(
