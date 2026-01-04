@@ -11,13 +11,13 @@ export function Usage() {
       <div style={{ backgroundColor: 'blue', color: 'white', height: '100%' }}>
         First
         <Flip.Target>
-          <button>Flip</button>
+          <button type="button">Flip</button>
         </Flip.Target>
       </div>
       <div style={{ backgroundColor: 'red', color: 'white', height: '100%' }}>
         Second
         <Flip.Target>
-          <button>Back</button>
+          <button type="button">Back</button>
         </Flip.Target>
       </div>
     </Flip>
@@ -35,13 +35,13 @@ export function Perspective() {
       <div style={{ backgroundColor: 'blue', color: 'white', height: '100%' }}>
         First
         <Flip.Target>
-          <button>Flip</button>
+          <button type="button">Flip</button>
         </Flip.Target>
       </div>
       <div style={{ backgroundColor: 'red', color: 'white', height: '100%' }}>
         Second
         <Flip.Target>
-          <button>Back</button>
+          <button type="button">Back</button>
         </Flip.Target>
       </div>
     </Flip>
