@@ -121,57 +121,116 @@ import { Flip } from '@gfazioli/react-flip'';
 
 function Demo() {
   return (
-    <Center>
-      <Flip h={200} w={400}{{props}}>
-        <Card shadow="sm" padding="lg" radius="md" withBorder>
-          <Card.Section>
-            <Image
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Flip{{props}} style={{ width: 400, height: 250 }}>
+        <div
+          style={{
+            border: '1px solid #dee2e6',
+            borderRadius: '8px',
+            padding: '16px',
+            backgroundColor: '#fff',
+            boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)',
+          }}
+        >
+          <div>
+            <img
               src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-              height={160}
               alt="Norway"
+              style={{ width: '100%', height: '160px', objectFit: 'cover', borderRadius: '8px' }}
             />
-          </Card.Section>
+          </div>
 
-          <Group justify="space-between" mt="md" mb="xs">
-            <Text fw={500}>Norway Fjord Adventures</Text>
-            <Badge color="pink" variant="light">
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              marginTop: '16px',
+              marginBottom: '12px',
+            }}
+          >
+            <div style={{ fontWeight: 500 }}>Norway Fjord Adventures</div>
+            <div
+              style={{
+                backgroundColor: 'rgba(255, 192, 203, 0.1)',
+                color: 'pink',
+                padding: '4px 12px',
+                borderRadius: '4px',
+                fontSize: '12px',
+              }}
+            >
               On Sale
-            </Badge>
-          </Group>
+            </div>
+          </div>
 
-          <Text size="sm" c="dimmed">
+          <div style={{ fontSize: '14px', color: '#868e96' }}>
             With Fjord Tours you can explore more of the magical fjord landscapes with tours and
             activities on and around the fjords of Norway
-          </Text>
+          </div>
 
-          <Group justify="right">
+          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
             <Flip.Target>
-              <Button color="blue" mt="md" radius="md">
+              <button
+                type="button"
+                style={{
+                  backgroundColor: '#228be6',
+                  color: 'white',
+                  border: 'none',
+                  padding: '8px 16px',
+                  borderRadius: '4px',
+                  marginTop: '16px',
+                  cursor: 'pointer',
+                }}
+              >
                 Edit Widget
-              </Button>
+              </button>
             </Flip.Target>
-          </Group>
-        </Card>
+          </div>
+        </div>
 
-        <Paper bg="dark" radius="md" withBorder p="lg">
-          <Stack>
-            <Title order={4} c="white">
-              Edit Widget
-            </Title>
-            <Text c="gray" size="sm">
+        <div
+          style={{
+            backgroundColor: '#25262b',
+            border: '1px solid #373A40',
+            borderRadius: '8px',
+            padding: '16px',
+          }}
+        >
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <h4 style={{ color: 'white', margin: 0, fontSize: '18px' }}>Edit Widget</h4>
+            <div style={{ color: '#909296', fontSize: '14px' }}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-            </Text>
-            <Switch c="white" defaultChecked label="Display image" />
-            <Switch c="white" label="Auto play" />
-            <Group justify="left">
+            </div>
+            <label style={{ color: 'white', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <input type="checkbox" defaultChecked />
+              Display image
+            </label>
+            <label style={{ color: 'white', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <input type="checkbox" />
+              Auto play
+            </label>
+            <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
               <Flip.Target>
-                <Button color="red" mt="md" radius="md">Close</Button>
+                <button
+                  type="button"
+                  style={{
+                    backgroundColor: '#fa5252',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    marginTop: '16px',
+                    cursor: 'pointer',
+                  }}
+                >
+                  Close
+                </button>
               </Flip.Target>
-            </Group>
-          </Stack>
-        </Paper>
+            </div>
+          </div>
+        </div>
       </Flip>
-    </Center>
+    </div>
   );
 }
 `;

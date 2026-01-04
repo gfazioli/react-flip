@@ -2,7 +2,6 @@ import {
   IconEdit,
   IconHeartFilled,
   IconLicense,
-  IconPackage,
   IconUserCode,
   IconVersions,
 } from '@tabler/icons-react';
@@ -45,13 +44,6 @@ export function PageHeader({ data }: PageHeaderProps) {
             link={`https://npmjs.com/package/${data.packageName}`}
           >
             {data.packageName}
-          </PageHeaderLink>
-          <PageHeaderLink
-            label="See More"
-            icon={<IconPackage size={16} />}
-            link="https://mantine-extensions.vercel.app/"
-          >
-            Mantine Extensions
           </PageHeaderLink>
           <PageHeaderLink
             label="Docs"
