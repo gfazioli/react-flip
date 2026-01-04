@@ -70,8 +70,7 @@ export const Footer: React.FC<FooterProps> = () => {
                 />
               </ThemeIcon>
               <Text fz={13} mr={64}>
-                This Mantine UI extension component has been create to extend the capabilities of
-                Mantine UI. Feel free to use it and{' '}
+                Feel free to use it and{' '}
                 <Anchor fz={13} href={(packageJson as any).repository}>
                   contribute to it
                 </Anchor>

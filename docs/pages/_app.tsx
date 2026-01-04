@@ -1,10 +1,12 @@
-import '@gfazioli/react-flip/styles.css';
-import '@mantine/code-highlight/styles.css';
 import '@mantine/core/styles.css';
+// The rest
+import '@mantine/code-highlight/styles.css';
 import '@mantine/dates/styles.css';
 import '@mantinex/demo/styles.css';
 import '@mantinex/mantine-header/styles.css';
 import '@mantinex/mantine-logo/styles.css';
+// Flip styles
+import '@gfazioli/react-flip/styles.css';
 
 import { AppProps } from 'next/app';
 import Head from 'next/head';
