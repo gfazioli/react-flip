@@ -30,7 +30,7 @@ const shikiAdapter = createShikiAdapter(loadShiki);
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <MantineProvider theme={theme}>
+    <MantineProvider theme={theme} defaultColorScheme="dark">
       <Head>
         <title>Mantine Flip</title>
         <meta

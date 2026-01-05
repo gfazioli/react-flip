@@ -9,7 +9,7 @@ describe('Flip', () => {
         <div>
           Pane 1
           <Flip.Target>
-            <button>Flip Back</button>
+            <button type="button">Flip Back</button>
           </Flip.Target>
         </div>
         <div>Pane 2</div>

@@ -13,6 +13,5 @@ export function useDidUpdate(fn: () => void, dependencies?: React.DependencyList
 
     mounted.current = true;
     return undefined;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies);
 }

@@ -17,13 +17,11 @@
 
 ## Overview
 
-This component is created on top of the [Mantine](https://mantine.dev/) library.
-
-[Mantine Flip](https://gfazioli.github.io/react-flip/) is a two-face container that animates between a front and a back view, ideal for compact UIs that need progressive disclosure (e.g., editing panels, settings, sign-in/sign-up toggles, or profile details). It supports both uncontrolled usage with Flip.Target to wire any element as a click trigger, and controlled usage via flipped/defaultFlipped using React state for full synchronization with your app logic. The component enforces exactly two children, accepts size constraints (w/h), and offers transition customization such as vertical flipping and distinct rotation directions for flip-in and flip-out. Styling hooks (classNames/Styles API) let you target inner parts for design refinement, while examples demonstrate practical patterns like credit-card editing, modal-like settings panes, and multi-target triggers within a single face.
+[React Flip](https://gfazioli.github.io/react-flip/) is a two-face container that animates between a front and a back view, ideal for compact UIs that need progressive disclosure (e.g., editing panels, settings, sign-in/sign-up toggles, or profile details). It supports both uncontrolled usage with Flip.Target to wire any element as a click trigger, and controlled usage via flipped/defaultFlipped using React state for full synchronization with your app logic. The component enforces exactly two children, accepts size constraints (w/h), and offers transition customization such as vertical flipping and distinct rotation directions for flip-in and flip-out. Styling hooks (classNames/Styles API) let you target inner parts for design refinement, while examples demonstrate practical patterns like credit-card editing, modal-like settings panes, and multi-target triggers within a single face.
 
 > [!note]
 >
-> → [Demo and Documentation](https://gfazioli.github.io/react-flip/) → [Youtube Video](https://www.youtube.com/playlist?list=PL85tTROKkZrWyqCcmNCdWajpx05-cTal4) → [More Mantine Components](https://mantine-extensions.vercel.app/)
+> → [Demo and Documentation](https://gfazioli.github.io/react-flip/)
 
 ## Installation
 
@@ -49,22 +47,19 @@ import { Flip } from '@gfazioli/react-flip';
 
 function Demo() {
   return (
-    <Flip h={200} w={200}>
-
-        <Paper radius="md" withBorder p="lg" shadow="md">
-          <h3>Front Card</h3>
-          <Flip.Target>
-            <Button>Flip Back</Button>
-          </Flip.Target>
-        </Paper>
-
-        <Paper radius="md" withBorder p="lg" shadow="md">
-          <h3>Back Card</h3>
-          <Flip.Target>
-            <Button>Flip Front</Button>
-          </Flip.Target>
-        </Paper>
-
+    <Flip duration={2} directionFlipIn="positive" style={{ width: 200, height: 200 }}>
+      <div style={{ backgroundColor: 'blue', color: 'white', height: '100%' }}>
+        First
+        <Flip.Target>
+          <button type="button">Flip</button>
+        </Flip.Target>
+      </div>
+      <div style={{ backgroundColor: 'red', color: 'white', height: '100%' }}>
+        Second
+        <Flip.Target>
+          <button type="button">Back</button>
+        </Flip.Target>
+      </div>
     </Flip>
   );
 }
@@ -83,10 +78,10 @@ The `Flip.Target` component is used to define the trigger for the flip animation
 
 Your support helps me:
 
-- Keep the project actively maintained with timely bug fixes and security updates 	
-- Add new features, improve performance, and refine the developer experience 	
-- Expand test coverage and documentation for smoother adoption 	
-- Ensure long‑term sustainability without relying on ad hoc free time 	
+- Keep the project actively maintained with timely bug fixes and security updates	
+- Add new features, improve performance, and refine the developer experience	
+- Expand test coverage and documentation for smoother adoption	
+- Ensure long‑term sustainability without relying on ad hoc free time	
 - Prioritize community requests and roadmap items that matter most
 
 Open source thrives when those who benefit can give back—even a small monthly contribution makes a real difference. Sponsorships help cover maintenance time, infrastructure, and the countless invisible tasks that keep a project healthy.

@@ -1,18 +1,18 @@
 import React from 'react';
+import { IconBrandGithub } from '@tabler/icons-react';
 import cx from 'clsx';
 import {
   ActionIcon,
   AppShell,
   Container,
   Group,
+  Image,
   RemoveScroll,
   Title,
   useMantineColorScheme,
 } from '@mantine/core';
 import { useHotkeys } from '@mantine/hooks';
-import { ColorSchemeControl, HeaderControls } from '@mantinex/mantine-header';
-import { MantineLogo } from '@mantinex/mantine-logo';
-import { meta } from '@mantinex/mantine-meta';
+import { ColorSchemeControl } from '@mantinex/mantine-header';
 import { PACKAGE_DATA } from '../../data';
 import classes from './Shell.module.css';
 
@@ -38,12 +38,17 @@ export function Shell({ children }: ShellProps) {
         <Container size="lg" px="md" className={classes.inner}>
           <Group>
             <a
-              href="https://mantine.dev/"
+              href="https://undolog.com/"
               target="_blank"
               className={cx('mantine-focus-auto', classes.logo)}
               rel="noreferrer"
             >
-              <MantineLogo size={30} type="mark" />
+              <Image
+                width={36}
+                height={36}
+                src="https://github.com/gfazioli/brand/blob/main/Undolog/logo-64x64.png?raw=true"
+                alt="Undolog"
+              />
             </a>
             <Title order={2}>{packageName}</Title>
           </Group>
@@ -65,22 +70,28 @@ export function Shell({ children }: ShellProps) {
               rel="noreferrer"
               aria-label="Undolog"
               title="Undolog"
-              variant="subtle"
+              variant="outline"
             >
               <img
                 width={36}
-                src="https://substackcdn.com/image/fetch/f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5d483192-7bf9-4d61-aaf7-ced1a3f4adf8_1024x1024.png"
+                src="https://github.com/gfazioli/brand/blob/main/Undolog/logo-64x64.png?raw=true"
                 alt="Undolog"
               />
             </ActionIcon>
-            <HeaderControls
+            <ActionIcon
               visibleFrom="sm"
-              githubLink={PACKAGE_DATA.repositoryUrl}
-              withDirectionToggle={false}
-              withSearch={false}
-              withSupport={false}
-              discordLink={meta.discordLink}
-            />
+              size={36}
+              radius={8}
+              component="a"
+              href="PACKAGE_DATA.repositoryUrl"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Undolog"
+              title="Undolog"
+              variant="outline"
+            >
+              <IconBrandGithub size={20} />
+            </ActionIcon>
           </Group>
           <Group hiddenFrom="sm">
             <ColorSchemeControl />

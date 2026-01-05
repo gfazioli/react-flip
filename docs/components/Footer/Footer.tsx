@@ -65,7 +65,7 @@ export const Footer: React.FC<FooterProps> = () => {
                     borderRadius: '8px',
                   }}
                   width={36}
-                  src="https://substackcdn.com/image/fetch/f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5d483192-7bf9-4d61-aaf7-ced1a3f4adf8_1024x1024.png"
+                  src="https://github.com/gfazioli/brand/blob/main/Undolog/logo-64x64.png?raw=true"
                   alt="Undolog"
                 />
               </ThemeIcon>
