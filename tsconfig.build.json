@@ -1,8 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "include": ["package", "@types"],
-  "exclude": ["**/*.test.tsx", "**/*.test.ts", "**/*.story.tsx", "**/*.story.ts", "package/dist"],
-  "compilerOptions": {
-    "emitDeclarationOnly": true
-  }
-}
