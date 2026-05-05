@@ -160,10 +160,10 @@ const FlipComponent = forwardRef<HTMLDivElement, FlipProps>((props, ref) => {
         }
       >
         <div ref={containerRef} className={classes.flipContainer} style={getDirectionIn}>
-          <div className={classes.flipFrontFace} style={{ zIndex: 0 }}>
+          <div className={classes.flipFrontFace} style={{ zIndex: 0 }} aria-hidden={_flipped}>
             {frontChild}
           </div>
-          <div className={classes.flipBackFace} style={getBackRotation}>
+          <div className={classes.flipBackFace} style={getBackRotation} aria-hidden={!_flipped}>
             {backChild}
           </div>
         </div>

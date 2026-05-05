@@ -21,6 +21,13 @@
   backface-visibility: hidden;
 }
 
+/* The hidden face still sits in the DOM with full size — disable pointer events
+ * so clicks on the visible face are not eaten by the back-facing one. */
+.flipFrontFace[aria-hidden="true"],
+.flipBackFace[aria-hidden="true"] {
+  pointer-events: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .flipContainer {
     transition: none;
