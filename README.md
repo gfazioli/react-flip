@@ -165,6 +165,13 @@ Three properties are mirrored as CSS custom properties on the root element. Over
 
 The clone receives a `data-flipped` attribute mirroring the current state (useful for CSS styling), and an `onClick` that toggles the flip while preserving the original handler.
 
+## Other Undolog components
+
+Small, accessible React components — same philosophy, same toolchain, zero runtime dependencies:
+
+- **[react-toggle-component](https://gfazioli.github.io/react-toggle/)** — an accessible toggle/switch with CSS-variable theming. ([npm](https://www.npmjs.com/package/react-toggle-component) · [GitHub](https://github.com/gfazioli/react-toggle))
+- **[react-amiga-guru-meditation](https://gfazioli.github.io/react-amiga-guru-meditation/)** — an error boundary that renders the iconic Amiga Guru Meditation screen. ([npm](https://www.npmjs.com/package/react-amiga-guru-meditation) · [GitHub](https://github.com/gfazioli/react-amiga-guru-meditation))
+
 ## License
 
 MIT — © Giovambattista Fazioli
