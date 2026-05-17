@@ -171,6 +171,7 @@ Small, accessible React components — same philosophy, same toolchain, zero run
 
 - **[react-toggle-component](https://gfazioli.github.io/react-toggle/)** — an accessible toggle/switch with CSS-variable theming. ([npm](https://www.npmjs.com/package/react-toggle-component) · [GitHub](https://github.com/gfazioli/react-toggle))
 - **[react-amiga-guru-meditation](https://gfazioli.github.io/react-amiga-guru-meditation/)** — an error boundary that renders the iconic Amiga Guru Meditation screen. ([npm](https://www.npmjs.com/package/react-amiga-guru-meditation) · [GitHub](https://github.com/gfazioli/react-amiga-guru-meditation))
+- **[@gfazioli/react-tilt](https://gfazioli.github.io/react-tilt/)** — interactive 3D tilt cards with parallax, glare, light, shadow, gyroscope, and spring physics. ([npm](https://www.npmjs.com/package/@gfazioli/react-tilt) · [GitHub](https://github.com/gfazioli/react-tilt))
 
 ## License
 
