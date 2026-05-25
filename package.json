@@ -1,7 +1,7 @@
 {
   "name": "@gfazioli/react-flip",
   "version": "1.0.0",
-  "description": "Flip is a React component that wraps any two faces and animates a 3D rotation between them — accessible, themeable via CSS variables, zero runtime dependencies.",
+  "description": "Flip is a React component that wraps any two faces and animates a 3D rotation between them \u2014 accessible, themeable via CSS variables, zero runtime dependencies.",
   "license": "MIT",
   "author": "Giovambattista Fazioli",
   "homepage": "https://gfazioli.github.io/react-flip/",
@@ -99,5 +99,10 @@
     "typescript-eslint": "^8.18.2",
     "vite": "^5.4.11",
     "vitest": "^2.1.8"
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild": "^0.25.0"
+    }
   }
 }
