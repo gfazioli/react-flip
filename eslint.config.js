@@ -30,7 +30,7 @@ export default tseslint.config(
       "jsx-a11y": jsxA11y,
     },
     settings: {
-      react: { version: "detect" },
+      react: { version: "19" },
     },
     rules: {
       ...react.configs.recommended.rules,
