@@ -1,6 +1,6 @@
 {
   "name": "@gfazioli/react-flip",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Flip is a React component that wraps any two faces and animates a 3D rotation between them — accessible, themeable via CSS variables, zero runtime dependencies.",
   "license": "MIT",
   "author": "Giovambattista Fazioli",
