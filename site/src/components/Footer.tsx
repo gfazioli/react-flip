@@ -16,9 +16,7 @@ export function Footer() {
           <a href="https://github.com/gfazioli/react-flip" target="_blank" rel="noreferrer noopener">
             GitHub
           </a>
-          <a href="https://github.com/sponsors/gfazioli" target="_blank" rel="noreferrer noopener">
-            Sponsor
-          </a>
+          <a href="#sponsors">Sponsor</a>
           <a
             href="https://github.com/gfazioli/react-flip/blob/main/LICENSE"
             target="_blank"
