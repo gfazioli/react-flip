@@ -91,6 +91,8 @@
 
 .sponsors-cta {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   justify-content: center;
 }
 
@@ -120,5 +122,34 @@
 }
 
 .sponsor-button:active {
+  transform: translateY(0);
+}
+
+/* Gradient pill CTA — warm orange, one-off Stripe donation */
+.coffee-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: linear-gradient(45deg, #f08c00, #e8590c);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  box-shadow: 0 8px 24px -8px rgba(232, 89, 12, 0.5);
+  transition: transform 120ms ease, box-shadow 250ms ease, filter 200ms ease;
+}
+
+.coffee-button:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 12px 32px -8px rgba(232, 89, 12, 0.6);
+}
+
+.coffee-button:active {
   transform: translateY(0);
 }
