@@ -1,4 +1,5 @@
 import { Logo } from "./Logo";
+import { ShareButtons } from "./ShareButtons";
 import "./Footer.css";
 
 export function Footer() {
@@ -17,14 +18,11 @@ export function Footer() {
             GitHub
           </a>
           <a href="#sponsors">Sponsor</a>
-          <a
-            href="https://github.com/gfazioli/react-flip/blob/main/LICENSE"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
+          <a href="https://github.com/gfazioli/react-flip/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">
             MIT License
           </a>
         </nav>
+        <ShareButtons />
         <p className="footer-credit">
           Built with care by{" "}
           <a href="https://gfazioli.github.io" target="_blank" rel="noreferrer noopener">
