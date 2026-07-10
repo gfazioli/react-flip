@@ -39,11 +39,72 @@
     />
     <meta name="twitter:image" content="https://gfazioli.github.io/react-flip/og-default.png" />
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "@gfazioli/react-flip",
+        "description": "Flip is a React component that wraps any two faces and animates a 3D rotation between them — accessible, themeable via CSS variables, zero runtime dependencies.",
+        "url": "https://gfazioli.github.io/react-flip/",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web Browser",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "Giovambattista Fazioli", "url": "https://github.com/gfazioli" },
+        "license": "https://opensource.org/licenses/MIT",
+        "sameAs": [
+          "https://github.com/gfazioli/react-flip",
+          "https://www.npmjs.com/package/@gfazioli/react-flip"
+        ],
+        "keywords": "react, react-component, flip, animation, 3d, card, transition, css-modules"
+      }
+    </script>
+
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <style>
+      .seo-fallback {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 0;
+        padding: 2rem;
+        text-align: center;
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+        background: #0a0a0a;
+        color: #e5e5e5;
+      }
+      .seo-fallback h1 { margin: 0; max-width: 22ch; font-size: clamp(1.75rem, 5vw, 3rem); line-height: 1.1; }
+      .seo-fallback p { margin: 0; max-width: 54ch; line-height: 1.6; color: #a3a3a3; }
+      .seo-fallback code { background: #1a1a1a; padding: 0.2em 0.5em; border-radius: 6px; }
+      .seo-fallback a { color: #fff; font-weight: 600; }
+      @media (prefers-color-scheme: light) {
+        .seo-fallback { background: #fff; color: #171717; }
+        .seo-fallback p { color: #525252; }
+        .seo-fallback code { background: #f0f0f0; }
+        .seo-fallback a { color: #000; }
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <!-- Static SEO / no-JS fallback: React (createRoot) clears #app and replaces this on mount. -->
+      <main class="seo-fallback">
+        <h1>Two faces, one component.</h1>
+        <p>
+          <strong>@gfazioli/react-flip</strong> — a React component that wraps any two faces and animates a 3D rotation
+          between them. Themeable via <code>perspective</code> / <code>duration</code> / <code>easing</code>, zero
+          runtime dependencies.
+        </p>
+        <p><code>npm install @gfazioli/react-flip</code></p>
+        <p>
+          <a href="https://www.npmjs.com/package/@gfazioli/react-flip">npm</a> ·
+          <a href="https://github.com/gfazioli/react-flip">GitHub</a>
+        </p>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
