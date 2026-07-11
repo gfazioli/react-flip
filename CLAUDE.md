@@ -14,7 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Tests**: vitest + jsdom + @testing-library/react + @testing-library/user-event
 - **Docs site**: custom Vite + React landing page in `site/` (single page)
 - **Package manager**: pnpm 9
-- **Release**: Changesets (CI workflow opens "Version Packages" PR; merging it publishes to npm)
+- **Release**: Changesets, **local only** — `release.yml` is disabled and `NPM_TOKEN` removed (decided 2026-06-02). Flow: add changeset → `pnpm changeset version` → commit/push → `pnpm release` → `git push origin --tags` → create the GitHub Release manually (the gfazioli.github.io cards read it). See the workspace `../CLAUDE.md` for details.
 
 ## Commands
 
@@ -81,7 +81,7 @@ CSS Modules are extracted by tsup/esbuild into `dist/index.css` and exposed via 
 - `tests/` — vitest specs
 - `site/` — single-page Vite + React documentation site. Imports `Flip` from the package itself via Vite alias `@gfazioli/react-flip → ../src/index.ts`. Sections: Hero, Features, **live theme Builder** with URL-persisted config (`?t=base64`), Preset gallery, Examples (product card / settings flip / auth flip), Install. Floating capsule nav with IntersectionObserver-driven active link. SEO: `<title>`, `<meta description>`, Open Graph + Twitter Card with `og-default.png` (1200×630), `<link rel="canonical">`, plus `site/public/sitemap.xml` and `robots.txt`.
 - `.changeset/` — pending release notes
-- `.github/workflows/` — `ci.yml` (typecheck/lint/test/build/site-build), `deploy-docs.yml` (site → GH Pages on push to main), `release.yml` (Changesets publish)
+- `.github/workflows/` — `ci.yml` (typecheck/lint/test/build/site-build), `deploy-docs.yml` (site → GH Pages on push to main), `release.yml` (**disabled** — releases are local-only)
 - `dist/`, `site-dist/`, `coverage/` — build/test outputs, **gitignored**
 
 ## Conventions
