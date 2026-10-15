@@ -23,6 +23,11 @@
 
 </div>
 
+<div align="center">
+  <p><img src="https://raw.githubusercontent.com/gfazioli/gfazioli/master/glancecard/react-flip.svg" width="880" alt="react-flip at a glance, refreshed daily: commits, releases, stars, issues and pull requests, a year of commit activity, the weekly rhythm, languages, latest commits and releases, contributors" /><br>
+  <sub>Made with <a href="https://github.com/gfazioli/glancecard">glancecard</a> · refreshed daily</sub></p>
+</div>
+
 <br/>
 
 > Wrap any two faces and animate a 3D rotation between them. Themeable via CSS variables, controlled or uncontrolled, zero runtime dependencies, ~2 KB gzipped.
